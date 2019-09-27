@@ -21,11 +21,13 @@
 
   <PropertyGroup Condition=" '$(TargetFramework)' == '$(NetCoreVersion)' ">
     <DefineConstants>$(DefineConstants);CORECLR</DefineConstants>
+    <PublishSingleFile>true</PublishSingleFile>
   </PropertyGroup>
 
   <ItemGroup>
     <None Update="akka.hocon">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
     </None>
   </ItemGroup>
 </Project>

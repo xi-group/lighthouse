@@ -1,3 +1,16 @@
+# Building fot .net core 3:
+
+[Install .NET Core SDK on Linux Ubuntu 18.04 - x64](https://dotnet.microsoft.com/download/linux-package-manager/ubuntu18-04/sdk-current)
+
+```bash
+cd src/Lighthouse
+```
+```bash
+dotnet publish -c Release --self-contained --framework netcoreapp3.0 -r ubuntu.18.04-x64
+```
+
+Output is in `src\Lighthouse\bin\Release\netcoreapp3.0\ubuntu.18.04-x64\publish\`
+
 # Lighthouse
 
 **Lighthouse** is a simple service-discovery tool for Akka.Cluster, designed to make it easier to play nice with PaaS deployments like Azure / Elastic Beanstalk / AppHarbor.
