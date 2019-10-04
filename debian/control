@@ -1,0 +1,16 @@
+Source: m51-lighthouse
+Maintainer: Ivo Vachkov <ivachkov@xi-group.com>
+Section: misc
+Priority: optional
+Standards-Version: 3.9.6
+Build-Depends: debhelper (>= 9),
+              dotnet-sdk-3.0 
+Homepage: https://github.com/xi-group/lighthouse
+Vcs-Browser: https://github.com/xi-group/lighthouse
+Vcs-Git: https://github.com/xi-group/lighthouse.git
+
+Package: m51-lighthouse
+Architecture: amd64
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: This is package for m51 LightHouse
+ The following package contains m51 LightHouse
