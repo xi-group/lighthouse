@@ -1,0 +1,19 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@ --with=systemd
+
+override_dh_auto_build:
+	dotnet publish src/Lighthouse/Lighthouse.csproj -c Release --self-contained true --framework netcoreapp3.0 -r ubuntu.18.04-x64
+
+override_dh_auto_install:
+	dh_install src/Lighthouse/bin/Release/netcoreapp3.0/ubuntu.18.04-x64/publish/Lighthouse /opt/m51-lighthouse/bin/
+	dh_install src/Lighthouse/bin/Release/netcoreapp3.0/ubuntu.18.04-x64/publish/Lighthouse.pdb /opt/m51-lighthouse/bin/
+	dh_install src/Lighthouse/bin/Release/netcoreapp3.0/ubuntu.18.04-x64/publish/akka.hocon /opt/m51-lighthouse/etc/
+	# dh_install SystemD service
+
+override_dh_shlibdeps:
+	# shilbdeps disabled
+
+override_dh_strip:
+	# strip disabled
