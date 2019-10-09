@@ -4,5 +4,4 @@ set -x
 
 systemctl stop m51-lighthouse
 systemctl disable m51-lighthouse
-rm -rf /etc/systemd/system/m51-lighthouse.service
 systemctl daemon-reload
