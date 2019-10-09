@@ -2,6 +2,7 @@
 
 set -x
 
+rm -rf /etc/systemd/system/m51-lighthouse.service
 ln -s /opt/m51-lighthouse/usr/share/m51-lighthouse.service /etc/systemd/system/m51-lighthouse.service
 systemctl daemon-reload
 systemctl enable m51-lighthouse
