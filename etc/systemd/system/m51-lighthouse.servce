@@ -1,0 +1,20 @@
+[Unit]
+Description=m51 Lighthouse
+Requires=network-online.target
+After=network-online.target
+
+[Service]
+User=nobody
+Group=nobody
+Restart=on-failure
+LimitAS=infinity
+LimitRSS=infinity
+LimitCORE=infinity
+LimitNOFILE=999999
+Environment=LANG=en_US.UTF-8
+Environment=LC_ALL=en_US.
+Type=notify
+ExecStart=/opt/m51-lighthouse/bin/Lighthouse -c /opt/m51-lighthouse/etc/akka.hocon
+
+[Install]
+WantedBy=multi-user.target
