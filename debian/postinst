@@ -1,3 +1,7 @@
 #!/bin/bash
 
 set -x
+
+ln -s /opt/m51-lighthouse/usr/share/m51-lighthouse.servce /etc/systemd/system/m51-lighthouse.servce
+systemctl enable m51-lighthouse.servce
+# systemctl start m51-lighthouse
