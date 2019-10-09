@@ -5,7 +5,7 @@ After=network-online.target
 
 [Service]
 User=nobody
-Group=nobody
+Group=nogroup
 Restart=on-failure
 LimitAS=infinity
 LimitRSS=infinity
