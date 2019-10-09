@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -x
+
+systemctl stop m51-lighthouse
+systemctl disable m51-lighthouse
