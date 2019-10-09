@@ -10,7 +10,7 @@ override_dh_auto_install:
 	dh_install src/Lighthouse/bin/Release/netcoreapp3.0/ubuntu.18.04-x64/publish/Lighthouse /opt/m51-lighthouse/bin/
 	dh_install src/Lighthouse/bin/Release/netcoreapp3.0/ubuntu.18.04-x64/publish/Lighthouse.pdb /opt/m51-lighthouse/bin/
 	dh_install src/Lighthouse/bin/Release/netcoreapp3.0/ubuntu.18.04-x64/publish/akka.hocon /opt/m51-lighthouse/etc/
-	dh_install etc/systemd/system/m51-lighthouse.servce /opt/m51-lighthouse/usr/share/
+	dh_install etc/systemd/system/m51-lighthouse.service /opt/m51-lighthouse/usr/share/
 
 override_dh_shlibdeps:
 	# shilbdeps disabled
